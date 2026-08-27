@@ -1,0 +1,25 @@
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head" appRevealOnScroll>
+      <p class="eyebrow">About</p>
+      <h2>Engineering considered software, not just interfaces.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text" appRevealOnScroll>
+        @for (para of paragraphs; track $index) {
+          <p>{{ para }}</p>
+        }
+      </div>
+
+      <ul class="focus-list" appRevealOnScroll>
+        @for (item of focusList; track item.label) {
+          <li>
+            <span>{{ item.label }}</span>
+            <span>{{ item.group }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

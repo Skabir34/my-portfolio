@@ -1,0 +1,26 @@
+<header [class.scrolled]="scrolled">
+  <div class="wrap">
+    <a href="#home" class="logo">SM<span>S</span>.</a>
+
+    <nav class="desktop-nav">
+      @for (link of navLinks; track link.fragment) {
+        <a [href]="'#' + link.fragment" [class.active]="activeFragment === link.fragment">{{ link.label }}</a>
+      }
+    </nav>
+
+    <div class="nav-actions">
+      @if (scrolled) {
+        <a href="#contact" class="btn btn-ghost nav-cta">Get in touch</a>
+      }
+      <button class="hamburger" (click)="toggleMobile()" [attr.aria-expanded]="mobileOpen" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" [class.open]="mobileOpen">
+  @for (link of navLinks; track link.fragment) {
+    <a [href]="'#' + link.fragment" (click)="closeMobile()">{{ link.label }}</a>
+  }
+</div>

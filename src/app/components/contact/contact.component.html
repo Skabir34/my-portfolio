@@ -1,0 +1,47 @@
+<section class="section-pad contact-section">
+  <div class="wrap contact-inner">
+    <p class="eyebrow center" appRevealOnScroll>Contact</p>
+    <h2 appRevealOnScroll>Have a project worth building?</h2>
+    <p class="lead" appRevealOnScroll>I'm open to Angular, Frontend and product-focused engineering opportunities.</p>
+
+    <div class="contact-cta" appRevealOnScroll>
+      <a [href]="'mailto:' + contact.email" class="btn btn-primary">Get In Touch</a>
+      <a [href]="contact.linkedin" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+      <a [href]="contact.cvPath" [download]="contact.cvFileName" class="btn btn-ghost">Download CV</a>
+    </div>
+
+    <div class="contact-meta" appRevealOnScroll>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21s7-7.4 7-12a7 7 0 1 0-14 0c0 4.6 7 12 7 12z" /><circle cx="12" cy="9" r="2.4" /></svg>
+        {{ contact.location }}
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>
+        <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+            19.79 19.79 0 0 1-8.63-3.07
+            19.5 19.5 0 0 1-6-6
+            19.79 19.79 0 0 1-3.07-8.67
+            A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72
+            12.84 12.84 0 0 0 .7 2.81
+            2 2 0 0 1-.45 2.11L8.09 9.91
+            a16 16 0 0 0 6 6l1.27-1.27
+            a2 2 0 0 1 2.11-.45
+            12.84 12.84 0 0 0 2.81.7
+            A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <a [href]="'tel:' + contact.phone">{{ contact.phone }}</a>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M16 3H8a2 2 0 0 0-2 2v14l6-3 6 3V5a2 2 0 0 0-2-2z" /></svg>
+        <a [href]="contact.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <!-- Phone number ({{ contact.phone }}) is intentionally not displayed prominently on the page,
+         per the "no phone number" content rule. It still lives in portfolio-data.ts if you want to
+         surface it later (e.g. inside the CV itself, which already includes it). -->
+  </div>
+</section>

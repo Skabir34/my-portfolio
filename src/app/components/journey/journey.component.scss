@@ -1,0 +1,80 @@
+.journey {
+  padding: 140px 0;
+}
+
+@media (max-width: 768px) {
+  .journey {
+    padding: 88px 0;
+  }
+}
+
+.journey-steps {
+  position: relative;
+  padding-left: 2px;
+}
+
+.journey-line {
+  position: absolute;
+  left: 19px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--border);
+}
+
+.journey-line-fill {
+  position: absolute;
+  left: 19px;
+  top: 6px;
+  width: 1px;
+  background: var(--accent);
+  height: 0%;
+  transition: height 0.1s linear;
+}
+
+.j-step {
+  position: relative;
+  padding: 0 0 64px 62px;
+}
+
+.j-step:last-child {
+  padding-bottom: 0;
+}
+
+.j-num {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-dim);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.j-step.in-view .j-num {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-dim);
+}
+
+.j-step h3 {
+  font-size: 19px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.j-step p {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  max-width: 520px;
+  line-height: 1.7;
+}

@@ -1,0 +1,28 @@
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head" appRevealOnScroll>
+      <p class="eyebrow">Experience</p>
+      <h2>Engineering journey</h2>
+    </div>
+
+    @for (entry of experience; track entry.role) {
+      <div class="exp-item" appRevealOnScroll>
+        <div class="exp-date">{{ entry.dateRange }}</div>
+        <div>
+          <div class="exp-role">{{ entry.role }}</div>
+          <div class="exp-org">{{ entry.org }} · {{ entry.location }}</div>
+          <ul class="exp-highlights">
+            @for (point of entry.highlights; track $index) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+          <div class="exp-tags">
+            @for (tag of entry.tags; track tag) {
+              <span>{{ tag }}</span>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

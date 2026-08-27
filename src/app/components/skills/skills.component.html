@@ -1,0 +1,21 @@
+<section class="section-pad skills-section">
+  <div class="wrap">
+    <div class="sec-head" appRevealOnScroll>
+      <p class="eyebrow">Skills</p>
+      <h2>Toolkit</h2>
+    </div>
+
+    <div class="skills-grid">
+      @for (cat of categories; track cat.name) {
+        <div class="skill-cat" appRevealOnScroll>
+          <h4>{{ cat.name }}</h4>
+          <div class="skill-tags">
+            @for (skill of cat.skills; track skill) {
+              <span>{{ skill }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

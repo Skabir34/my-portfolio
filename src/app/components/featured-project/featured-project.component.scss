@@ -1,0 +1,235 @@
+.project-section {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  font-size: clamp(34px, 5vw, 56px);
+  color: var(--text);
+  line-height: 1;
+}
+
+.project-sub {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  margin-top: 14px;
+}
+
+.project-dates {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.project-frame {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(135deg, rgba(90, 211, 224, 0.06), transparent 60%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 26px),
+    var(--bg-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 56px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.project-frame:hover {
+  border-color: var(--accent);
+}
+
+.frame-dots {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  gap: 7px;
+  z-index: 2;
+}
+
+.frame-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+
+.frame-label {
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.frame-note {
+  color: var(--text-faint);
+  font-size: 12px;
+  z-index: 1;
+}
+
+.frame-hover {
+  z-index: 1;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.3s ease;
+}
+
+.frame-hover svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--accent);
+  fill: none;
+}
+
+.project-frame:hover .frame-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-desc {
+  color: var(--text-dim);
+  font-size: 16px;
+  line-height: 1.85;
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 64px;
+}
+
+.tech-tags span {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 7px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  color: var(--text-dim);
+}
+
+.resp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 56px;
+}
+
+@media (max-width: 768px) {
+  .resp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resp-cell {
+  background: var(--bg-alt);
+  padding: 32px;
+}
+
+.resp-cell h4 {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.resp-cell p {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+.scope-list {
+  columns: 2;
+  gap: 40px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 640px) {
+  .scope-list {
+    columns: 1;
+  }
+}
+
+.scope-list li {
+  color: var(--text-dim);
+  font-size: 14px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  break-inside: avoid;
+  display: flex;
+  gap: 10px;
+}
+
+.scope-list li::before {
+  content: '—';
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.project-cta {
+  display: flex;
+  gap: 16px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.badge-dev {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  border: 1px dashed var(--border-strong);
+  padding: 8px 14px;
+  border-radius: 2px;
+}

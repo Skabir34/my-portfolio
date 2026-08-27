@@ -1,0 +1,78 @@
+<section class="project-section section-pad">
+  <div class="wrap">
+    <div class="project-top" appRevealOnScroll>
+      <div>
+        <p class="eyebrow">Featured Project</p>
+        <h2 class="project-title">{{ project.title }}</h2>
+        <p class="project-sub">{{ project.subtitle }}</p>
+        <p class="project-dates">{{ project.dateRange }} · <span class="status-dot"></span> {{ project.status }}</p>
+      </div>
+
+      <div class="project-top-cta">
+        <a
+          [href]="project.liveUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+          (click)="visitLiveSite(); $event.preventDefault()"
+        >
+          Visit Aliz Tours
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17 17 7M9 7h8v8" /></svg>
+        </a>
+      </div>
+    </div>
+
+    <a
+      class="project-frame"
+      [href]="project.liveUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      appRevealOnScroll
+      aria-label="Open the live Aliz Tours website in a new tab"
+    >
+      <span class="frame-dots"><span></span><span></span><span></span></span>
+      <span class="frame-label">ALIZ TOURS — LIVE PRODUCT</span>
+      <span class="frame-note">aliztours.com — click to open the live site</span>
+      <span class="frame-hover">Live Website <svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+    </a>
+
+    <p class="project-desc" appRevealOnScroll>{{ project.description }}</p>
+
+    <div class="tech-tags" appRevealOnScroll>
+      @for (tech of project.tech; track tech) {
+        <span>{{ tech }}</span>
+      }
+    </div>
+
+    <div class="resp-grid" appRevealOnScroll>
+      @for (item of project.responsibilities; track item.title) {
+        <div class="resp-cell">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.body }}</p>
+        </div>
+      }
+    </div>
+
+    <div appRevealOnScroll>
+      <p class="eyebrow" style="margin-bottom: 24px;">Broader Engineering Scope</p>
+      <ul class="scope-list">
+        @for (item of project.scope; track $index) {
+          <li>{{ item }}</li>
+        }
+      </ul>
+    </div>
+
+    <div class="project-cta" appRevealOnScroll>
+      <a
+        [href]="project.liveUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-ghost"
+      >
+        Live Website
+        <svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17 17 7M9 7h8v8" /></svg>
+      </a>
+      <span class="badge-dev">Payment integration — planned</span>
+    </div>
+  </div>
+</section>

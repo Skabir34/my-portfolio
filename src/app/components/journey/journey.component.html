@@ -1,0 +1,22 @@
+<section class="journey">
+  <div class="wrap">
+    <div class="sec-head" appRevealOnScroll>
+      <p class="eyebrow">Case Study</p>
+      <h2>From idea to production</h2>
+      <p>How Aliz Tours moved from a requirements document to a live, deployed application.</p>
+    </div>
+
+    <div class="journey-steps" #stepsContainer>
+      <div class="journey-line"></div>
+      <div class="journey-line-fill" [style.height.%]="fillHeight"></div>
+
+      @for (step of steps; track step.number) {
+        <div class="j-step" appRevealOnScroll>
+          <div class="j-num">{{ step.number }}</div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

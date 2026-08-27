@@ -1,0 +1,12 @@
+<section class="section-pad stats-section">
+  <div class="wrap">
+    <div class="stats-grid" appRevealOnScroll>
+      @for (stat of stats; track stat.label) {
+        <div class="stat-cell">
+          <div class="stat-num" [appCountUp]="stat.value" [countSuffix]="stat.suffix">0</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
