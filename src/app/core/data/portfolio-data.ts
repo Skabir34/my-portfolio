@@ -48,13 +48,13 @@ export const HERO = {
 };
 
 export const ABOUT_PARAGRAPHS: string[] = [
-  "I'm an Angular-focused software engineer with three-plus years building production applications for the FinTech and BFSI space — the kind of systems where a miscalculated EMI or a broken loan journey isn't a cosmetic bug, it's a business problem.",
+  "I'm an Angular-focused software engineer with three-plus years building production applications for the FinTech and BFSI space the kind of systems where a miscalculated EMI or a broken loan journey isn't a cosmetic bug, it's a business problem.",
   'Most of my work lives at the intersection of frontend architecture and real-world constraints: a JSON-config-driven workflow engine that powers Gold, Solar and Two-Wheeler lending journeys on one unified admin platform, RxJS-powered calculation engines, and a shared component library used across the frontend team.',
-  "I care about the parts of engineering that don't show up in a screenshot — performance, maintainability and shipping without surprises. Across three major production launches on that platform, I've shipped with zero P0/P1 defects while processing 5,000+ loan applications.",
+  "I care about the parts of engineering that don't show up in a screenshot performance, maintainability and shipping without surprises. Across three major production launches on that platform, I've shipped with zero P0/P1 defects while processing 5,000+ loan applications.",
 ];
 
 export const FOCUS_LIST: { label: string; group: string }[] = [
-  { label: 'Angular 12–17', group: 'Core' },
+  { label: 'Angular 12–19', group: 'Core' },
   { label: 'TypeScript', group: 'Language' },
   { label: 'RxJS / Signals', group: 'Reactive' },
   { label: 'REST APIs', group: 'Integration' },
@@ -67,7 +67,7 @@ export const STATS: Stat[] = [
   { value: 40, suffix: '%', label: 'Less Code Duplication' },
   { value: 30, suffix: '%', label: 'Faster Feature Delivery' },
   { value: 25, suffix: '%', label: 'Page-Load Improvement' },
-  { value: 5000, suffix: '+', label: 'Loan Applications Processed' },
+  { value: 6, suffix: '', label: 'Projects & Applications Built' },
   { value: 0, suffix: '', label: 'P0/P1 Production Defects Across 3 Major Launches' },
 ];
 
@@ -77,8 +77,8 @@ export const ALIZ_TOURS = {
   liveUrl: 'https://www.aliztours.com/',
   dateRange: '08/2026 — Present',
   description:
-    'Aliz Tours is a full-stack travel and tourism platform built to showcase destinations, tour packages, accommodations and travel services, while handling real user workflows — exploring tours, submitting inquiries, and booking-related interactions — rather than acting as a static brochure site.',
-  tech: ['React.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3 / SCSS', 'REST APIs', 'Node.js', 'Database'],
+    'Aliz Tours is a full-stack travel and tourism platform built to showcase destinations, tour packages, accommodations and travel services, while handling real user workflows — exploring tours, submitting inquiries, and booking-related interactions rather than acting as a static brochure site.',
+  tech: ['React.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3 / SCSS', 'REST APIs', 'Node.js', 'Database', 'Laravel', 'PHP', 'Linux Server', 'Domain & Hosting', 'Production Deployment'],
   responsibilities: [
     {
       title: 'Frontend Development',
@@ -115,7 +115,7 @@ export const ALIZ_TOURS = {
 };
 
 export const JOURNEY_STEPS: JourneyStep[] = [
-  { number: '01', title: 'Requirement', description: "Understanding the travel platform's requirements — the destinations, packages and user journeys the product needed to support." },
+  { number: '01', title: 'Requirement', description: "Understanding the travel platform's requirements the destinations, packages and user journeys the product needed to support." },
   { number: '02', title: 'Architecture', description: 'Planning the frontend, backend, API and database structure before writing implementation code.' },
   { number: '03', title: 'Development', description: 'Building reusable UI components and the core application workflows on top of that architecture.' },
   { number: '04', title: 'Integration', description: 'Connecting frontend interfaces with backend APIs and dynamic, live data.' },
@@ -130,11 +130,11 @@ export const EXPERIENCE: ExperienceEntry[] = [
     org: 'Homeville Group',
     location: 'Lower Parel, Mumbai',
     highlights: [
-      'Architected a JSON-config-driven Angular workflow engine for Gold, Solar and Two-Wheeler loan journeys, consolidating 3 product codebases into a unified admin platform — zero P0/P1 defects across all three production launches, processing 5,000+ loan applications',
-      'Built reusable RxJS-powered calculation engines (EMI, gold purity, loan eligibility) using Angular services and reactive streams, adopted across 3 lending journeys — cutting shared codebase duplication by 40% and compressing feature delivery cycles by 30%',
-      'Led Angular UI standardization by migrating from Angular Material Data Table to ng-zorro (nz-table) and delivering Key Fact Statement (KFS) journey flows — improving page-load performance by 25% and establishing a shared component library used by the full frontend team',
-      'Defined component API documentation and PR review standards for a 5-member Agile squad using JIRA — reducing new-developer onboarding time by 20% and measurably improving first-PR code quality',
-      'Designed a Micro Frontend (MFE) module-federation boundary map separating Gold, Solar and Two-Wheeler journeys into independently deployable Angular feature modules — adopted as the baseline MFE rollout strategy by the tech lead',
+      'Architected a JSON-config-driven Angular workflow engine for Gold, Solar and Two-Wheeler loan journeys, consolidating 3 product codebases into a unified admin platform zero P0/P1 defects across all three production launches, processing 5,000+ loan applications',
+      'Built reusable RxJS-powered calculation engines (EMI, gold purity, loan eligibility) using Angular services and reactive streams, adopted across 3 lending journeys cutting shared codebase duplication by 40% and compressing feature delivery cycles by 30%',
+      'Led Angular UI standardization by migrating from Angular Material Data Table to ng-zorro (nz-table) and delivering Key Fact Statement (KFS) journey flows improving page-load performance by 25% and establishing a shared component library used by the full frontend team',
+      'Defined component API documentation and PR review standards for a 5-member Agile squad using JIRA reducing new-developer onboarding time by 20% and measurably improving first-PR code quality',
+      'Designed a Micro Frontend (MFE) module-federation boundary map separating Gold, Solar and Two-Wheeler journeys into independently deployable Angular feature modules adopted as the baseline MFE rollout strategy by the tech lead',
     ],
     tags: ['Angular', 'RxJS', 'ng-zorro', 'Module Federation', 'JIRA'],
   },
@@ -167,7 +167,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
 export const SKILLS: SkillCategory[] = [
   {
     name: 'Frontend',
-    skills: ['Angular 12–17', 'TypeScript', 'JavaScript ES6+', 'RxJS', 'Observables', 'Subjects', 'BehaviorSubject', 'Signals'],
+    skills: ['Angular 12–19', 'TypeScript', 'JavaScript ES6+', 'RxJS', 'Observables', 'Subjects', 'BehaviorSubject', 'Signals'],
   },
   {
     name: 'Forms & UX',
@@ -194,6 +194,9 @@ export const SKILLS: SkillCategory[] = [
       'Lazy Loading',
       'OnPush Change Detection',
       'Standalone Components',
+      'Signals',
+      'RxJS Streams',
+      'Reactive State Management',
       'JSON-Config Architecture',
       'Module Federation (MFE)',
       'Tree Shaking',
