@@ -34,7 +34,7 @@ export const CONTACT = {
   name: 'Shaikh Mohammed Shahrukh',
   role: 'Angular Developer',
   tagline: 'Angular Developer · Frontend Engineer · FinTech / BFSI',
-  email: 'shaikhkabir17786@gmail.com',
+  email: 'shahrukhshaikh3413@gmail.com',
   phone: '+91 7304744955',
   linkedin: 'https://www.linkedin.com/in/shaikhmohammadshahrukh/',
   location: 'Mumbai, India',
@@ -43,7 +43,7 @@ export const CONTACT = {
 };
 
 export const HERO = {
-  headline: 'I build scalable web applications from idea to production.',
+  headline: 'Building scalable web applications with Angular, TypeScript, JavaScript & REST APIs.',
   sub: 'Angular-focused software engineer with 3+ years of experience building scalable, config-driven applications for FinTech and BFSI platforms.',
 };
 
